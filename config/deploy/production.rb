@@ -15,12 +15,16 @@ set :branch, "master"
 set :rails_env, "production"
 set :keep_releases, 60
 
-set :rvm_ruby_version, "2.1.2"
+set :rvm_ruby_version, "2.3.1"
 
 set :whenever_roles, :web
 
 set :ssh_options, user: "apps",
                   forward_agent: true
+
+set :default_shell, "/bin/bash -l"
+
+set :passenger_restart_with_touch, true
 
 # role-based syntax
 # ==================
